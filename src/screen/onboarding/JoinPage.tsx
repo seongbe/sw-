@@ -1,7 +1,7 @@
 // screens/JoinPage.tsx
 import React from 'react';
 import { Button } from 'react-native';
-import { Container, Text, Logo, Google, Kakao } from '../../styles/JoinPageStyles';
+import { Container, Text, Logo, Google, Kakao } from '../../styles/pages/JoinPageStyles';
 import { JoinPageNavigationProp } from '../../types/navigation';
 
 type Props = {

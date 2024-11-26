@@ -1,9 +1,15 @@
 // screens/HomeScreen.tsx
 import React from 'react';
-import { Container, Logo, Text } from '../../styles/HomeScreenStyles';
+import { Container, Logo, Text } from '../../styles/components/HomeScreenStyles';
 import ButtonComponent from '../../component/ButtonComponent';
+import { MainPageNavigationProp } from '../../types/navigation';
  
-export default function HomeScreen() {
+
+
+type Props = {
+  navigation: MainPageNavigationProp;
+};
+export default function HomeScreen({ navigation }: Props) {
   return (
     <Container>
       <Logo source={require('../../asset/images/title.png')} />
@@ -12,7 +18,7 @@ export default function HomeScreen() {
         title="시작하기"
         width="190px"
         height="60px"
-        
+        onPress={() => navigation.navigate('Main')}
       />
     </Container>
   );

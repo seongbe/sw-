@@ -1,4 +1,10 @@
 {
   "name": "MyApp",
-  "displayName": "MyApp"
+  "displayName": "MyApp",
+  "expo": {
+    "assetBundlePatterns": ["**/*"],
+    "plugins": ["react-native-vector-icons"]
+  }
 }
+
+ 

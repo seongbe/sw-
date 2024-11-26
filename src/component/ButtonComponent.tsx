@@ -1,4 +1,3 @@
-// components/ButtonComponent.tsx
 import React from 'react';
 import styled from 'styled-components/native';
 import { TouchableOpacity, Text } from 'react-native';
@@ -16,7 +15,7 @@ const StyledButton = styled(TouchableOpacity)<{ width?: string; height?: string 
   height: ${({ height }) => height || '50px'};
   align-items: center;
   justify-content: center;
-  border-radius: 30px;
+  border-radius: 20px;
   margin-top: 40px;
 `;
 
@@ -26,7 +25,7 @@ const ButtonText = styled(Text)`
   font-weight: bold;
 `;
 
-const ButtonComponent: React.FC<ButtonProps> = ({ title, width, height, onPress }) => {
+const ButtonComponent: React.FC<ButtonProps> = ({ title, width, height, onPress = () => {} }) => {
   return (
     <StyledButton width={width} height={height} onPress={onPress}>
       <ButtonText>{title}</ButtonText>

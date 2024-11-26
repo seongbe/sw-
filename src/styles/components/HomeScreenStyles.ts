@@ -10,6 +10,7 @@ const Container = styled.View`
 
 const Text = styled.Text`
   margin-top: 30px;
+  margin-bottom: 30%;
   font-size: 35px;
     color: #0D8C99;
     font-weight: bold; /* 글씨체를 두껍게 */
