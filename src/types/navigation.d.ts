@@ -5,13 +5,15 @@ export type RootStackParamList = {
   Home: undefined;
   Main: undefined;
   Recommend: undefined;
-  MyTravelPage: undefined;
+  MyTravel: undefined;
   Calendar: undefined;
+  AiChatPage : undefined
 };
 export type BottomTabParamList = {
   HomeTab: undefined; // Home Tab
   MyTravel: undefined; // MyTravel Tab
   Calendar: undefined; // Calendar Tab
+  AiChatPage: undefined;
 };
 
 export type JoinPageNavigationProp = NativeStackNavigationProp<
@@ -36,10 +38,15 @@ export type RecommendPageNavigationProp = NativeStackNavigationProp<
 
 export type MyTravelPageNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
-  'MyTravelPage'
+  'MyTravel'
 >;
  
 export type JoinPageNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
   'Calendar'
+>;
+
+export type AiChatPageNavigationProp = NativeStackNavigationProp<
+  RootStackParamList,
+  'AiChatPage'
 >;

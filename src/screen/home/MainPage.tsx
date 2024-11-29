@@ -31,7 +31,7 @@ export default function MainPage({ navigation }: Props) {
         duration="1h 30m"
         tags={['자연', '여유로운', '즉흥적인']}
         passengers="성인 2"
-        onPress={() => navigation.navigate('MyTravelPage')}
+        onPress={() => navigation.navigate('MyTravel')}
       />
        
         <S.Text>할인중인 여행(광고)</S.Text>
