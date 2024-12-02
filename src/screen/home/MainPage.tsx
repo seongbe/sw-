@@ -31,7 +31,7 @@ export default function MainPage({ navigation }: Props) {
         duration="1h 30m"
         tags={['자연', '여유로운', '즉흥적인']}
         passengers="성인 2"
-        onPress={() => navigation.navigate('MyTravel')}
+        onPress={() => navigation.navigate('TravelPlan')}
       />
        
         <S.Text>할인중인 여행(광고)</S.Text>
@@ -57,8 +57,10 @@ export default function MainPage({ navigation }: Props) {
         <ContainerComponent width="90%" height="100px" margin="20px">
           <Text>세 번째 컨테이너</Text>
         </ContainerComponent>
-
+        <S.RowContainer>
         <S.Text>오늘의 추천 여행지(gpt)</S.Text>
+        <S.SmallText onPress={() => navigation.navigate('TodayRecommend')}>모두 보기</S.SmallText>
+        </S.RowContainer>
         <S.HorizontalScrollContainer horizontal showsHorizontalScrollIndicator={false}>
           <S.ItemContainer>
             <ContainerComponent width="160px" height="200px">

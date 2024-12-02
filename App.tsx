@@ -10,7 +10,14 @@ import RecommendPage from './src/screen/travel/RecommendPage';
 import BottomTabNavigation from './src/navigation/BottomTabNavigationApp';
 import MyTravelPage from './src/screen/home/MyTravelPage';
 import CalendarPage from './src/screen/calendar/CalendarPage';
-import CustomHeader from './src/component/CustomHeader';
+import TravelPlan from './src/screen/travel/TravelPlan';
+import CustomHeader from './src/component/CustomHeader'; 
+import TodayRecommendPage from './src/screen/travel/TodayRecommendPage';
+import DetailTravel from './src/screen/calendar/DetailTravel' 
+import MyPage from './src/screen/mypage/MyPage';
+import SaveTravel  from './src/screen/mypage/SaveTravel';
+import Setting from './src/screen/mypage/Setting';
+import TravelReview from './src/screen/mypage/TravelReview';
 import Theme from './src/styles/theme';
 import { RootStackParamList } from './src/types/navigation';
 
@@ -67,6 +74,13 @@ export default function App() {
           <Stack.Screen name="Recommend" component={RecommendPage} />
           <Stack.Screen name="MyTravel" component={MyTravelPage} />
           <Stack.Screen name="Calendar" component={CalendarPage} />
+          <Stack.Screen name="TravelPlan" component={TravelPlan} />
+          <Stack.Screen name="TodayRecommend" component={TodayRecommendPage} />
+          <Stack.Screen name="DetailTravel" component={DetailTravel}/>
+          <Stack.Screen name="MyPage" component={MyPage} /> 
+          <Stack.Screen name="SaveTravel" component={SaveTravel} /> 
+          <Stack.Screen name="Setting" component={Setting}/>
+          <Stack.Screen name="TravelReview" component={TravelReview}/>
         </Stack.Navigator>
       </NavigationContainer>
     </ThemeProvider>

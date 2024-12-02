@@ -1,5 +1,6 @@
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
+// RootStackParamList에 TodayRecommendPage 추가
 export type RootStackParamList = {
   Join: undefined;
   Home: undefined;
@@ -7,46 +8,42 @@ export type RootStackParamList = {
   Recommend: undefined;
   MyTravel: undefined;
   Calendar: undefined;
-  AiChatPage : undefined
-};
-export type BottomTabParamList = {
-  HomeTab: undefined; // Home Tab
-  MyTravel: undefined; // MyTravel Tab
-  Calendar: undefined; // Calendar Tab
   AiChatPage: undefined;
+  TravelPlan: undefined;
+  TodayRecommend: undefined; 
+  DetailTravel: undefined;
+  MyPage: undefined;
+  SaveTravel: undefined;
+  Setting: undefined;
+  TravelReview: undefined;
 };
 
-export type JoinPageNavigationProp = NativeStackNavigationProp<
-  RootStackParamList,
-  'Join'
->;
-
-export type HomeScreenNavigationProp = NativeStackNavigationProp<
-  RootStackParamList,
-  'Home'
->;
-
-export type MainPageNavigationProp = NativeStackNavigationProp<
-  RootStackParamList,
-  'Main'
->;
-
-export type RecommendPageNavigationProp = NativeStackNavigationProp<
-  RootStackParamList,
-  'Recommend'
->;
-
-export type MyTravelPageNavigationProp = NativeStackNavigationProp<
-  RootStackParamList,
-  'MyTravel'
->;
  
-export type JoinPageNavigationProp = NativeStackNavigationProp<
-  RootStackParamList,
-  'Calendar'
->;
+export type BottomTabParamList = {
+  HomeTab: undefined;
+  MyTravel: undefined;
+  Calendar: undefined;
+  AiChatPage: undefined;
+  TravelPlan: undefined;
+  MyPage: undefined;
+};
 
-export type AiChatPageNavigationProp = NativeStackNavigationProp<
-  RootStackParamList,
-  'AiChatPage'
->;
+// 각 네비게이션 타입을 추출하는 유틸리티 타입
+export type NavigationProp<T extends keyof RootStackParamList> =
+  NativeStackNavigationProp<RootStackParamList, T>;
+
+// 예제: 특정 페이지 네비게이션 타입 사용
+export type JoinPageNavigationProp = NavigationProp<'Join'>;
+export type HomeScreenNavigationProp = NavigationProp<'Home'>;
+export type MainPageNavigationProp = NavigationProp<'Main'>;
+export type RecommendPageNavigationProp = NavigationProp<'Recommend'>;
+export type MyTravelPageNavigationProp = NavigationProp<'MyTravel'>;
+export type CalendarPageNavigationProp = NavigationProp<'Calendar'>;
+export type AiChatPageNavigationProp = NavigationProp<'AiChatPage'>;
+export type TravelPlanPageNavigationProp = NavigationProp<'TravelPlan'>;
+export type TodayRecommendPageNavigationProp = NavigationProp<'TodayRecommend'>;
+export type DetailTravelNavigationProp = NavigationProp<'DetailTravel'>;
+export type MyPageNavigationProp = NavigationProp<'MyPage'>; 
+export type SaveTravelNavigationProp = NavigationProp<'SaveTravel'>; 
+export type SettingNavigationProp = NavigationProp<'Setting'>; 
+export type TravelReviewNavigationProp = NavigationProp<'TravelReview'>; 

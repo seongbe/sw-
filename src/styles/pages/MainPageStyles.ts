@@ -39,3 +39,17 @@ export const IconLabel = styled.Text`
   font-size: ${({ theme }) => theme.fontSize.small};
   color: ${({ theme }) => theme.colors.text};
 `;
+
+export const RowContainer = styled.View`
+  display: flex;
+  flex-direction: row;
+`;
+
+export const SmallText = styled.Text`
+ color: #007A8C;
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+ margin-left: 15%;
+ margin-top: 5%;
+`;
